@@ -21,6 +21,10 @@ Route::get('about',[PagesController::class, 'about']);
 Route::get('cards', [CardsController::class, 'index']);
 Route::get('cards/{card}', [CardsController::class, 'show']);
 Route::post('cards/{card}/notes', [NotesController::class, 'store']);
+
+Route::get('/notes/{note}/edit',[NotesController::class, 'edit']);
+
+Route::patch('notes/{note}',[NotesController::class, 'update']);
 /*Route::get('posts/{post} ', function($slug){
     $path = __DIR__ . "/../resources/posts/{$slug}.html";
     

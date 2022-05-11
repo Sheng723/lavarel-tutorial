@@ -20,10 +20,10 @@ class CardsController extends Controller
 
         return view('cards.show',compact('card'));
     }*/
-    public function show($id){
-        $card = Card::find($id);
-
-        return view('cards.show',compact('card'));
+    public function show(Card $card){
+        
+        return $card->notes[0];
+        //return view('cards.show',compact('card'));
     }
 }
 
