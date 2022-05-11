@@ -9,7 +9,7 @@
     </ul>
     <h2>Add a new note</h2>
     <form method="POST" action = "/cards/{{$card->id}}/notes">
-        @crsf
+        @csrf
         <textarea name ="body"></textarea>
         <button type = "submit"> Add note </button>
 

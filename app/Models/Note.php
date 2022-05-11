@@ -13,4 +13,5 @@ class Note extends Model
     {
         return $this -> belongsTo(Card::class);
     }
+    
 } 
