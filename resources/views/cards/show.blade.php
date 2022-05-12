@@ -5,7 +5,7 @@
     <ul>
         @foreach ($card -> notes as $note)
             <li>{{$note -> body}}
-                <a href ="#" style="float::right">{{$note -> user_id}}</a>
+                <a href ="#" style="float::right">{{$note->users->username}}</a>
             </li>
         @endforeach
     </ul>
