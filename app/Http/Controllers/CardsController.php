@@ -21,9 +21,15 @@ class CardsController extends Controller
         return view('cards.show',compact('card'));
     }*/
     public function show(Card $card){
-        
-        return $card->notes[0];
-        //return view('cards.show',compact('card'));
+        //DB::enableQueryLog(); 
+        //DB::table('users')->get();
+        $card -> load('notes.users');
+        //$card = Card::with('notes')->find(1);
+        //dd(DB::getQueryLog());   
+        //return $card->notes[0]->user;
+        return view('cards.show',compact('card'));
+        //$card = Card::with('notes')->find(1);
+        //return $card;
     }
 }
 
